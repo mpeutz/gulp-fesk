@@ -9,7 +9,7 @@ This plugin currently lacks tests.
 ## Install
 
 ```
-npm install gulp-msg
+npm install git://github.com/mpeutz/gulp-msg.git
 ```
 
 ## Usage
