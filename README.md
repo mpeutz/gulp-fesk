@@ -1,6 +1,6 @@
 # gulp-msg
 
-Gulp plugin for MSG (Magnificent styleguide) an enhanced version of KSS ([Knyle Stype Sheets](http://warpspire.com/kss/)) documentation generation.
+Gulp plugin for MSG (Magnificent styleguide) an enhanced version of KSS ([Knyle Style Sheets](http://warpspire.com/kss/)) documentation generation.
 
 This plugin is based on [kss-node](https://github.com/hughsk/kss-node) and generates a styleguide based on code documentation. The plugin is mainly a fork of `kss-nodes`'s bin script.
 
