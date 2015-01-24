@@ -1,0 +1,33 @@
+{
+  "name": "gulp-msg",
+  "version": "0.0.1",
+  "description": "Gulp plugin for MSG (Magnificent Style Guide) documentation generation",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mpeutz/gulp-msg"
+  },
+  "keywords": [
+    "msg",
+    "documentation",
+    "styleguide",
+    "generator",
+    "gulp"
+  ],
+  "contributor": {
+    "name": "Mike Peutz",
+    "email": "mpeutz@gmail.com"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "msg": "~0.1.0",
+    "through": "~2.3.4",
+    "gulp": "~3.5.2",
+    "gulp-util": "~2.2.14",
+    "marked": "~0.3.1",
+    "gulp-less": "~1.2.1"
+  },
+  "bugs": {
+    "url": "https://github.com/mpeutz/gulp-msg/issues"
+  },
+  "homepage": "https://github.com/mpeutz/gulp-msg",
+}
