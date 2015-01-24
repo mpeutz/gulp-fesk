@@ -6,13 +6,6 @@
     "type": "git",
     "url": "https://github.com/mpeutz/gulp-msg"
   },
-  "keywords": [
-    "msg",
-    "documentation",
-    "styleguide",
-    "generator",
-    "gulp"
-  ],
   "contributor": {
     "name": "Mike Peutz",
     "email": "mpeutz@gmail.com"
