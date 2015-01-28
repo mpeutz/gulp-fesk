@@ -20,7 +20,7 @@ module.exports = stringify;
 function getSerialize (fn, decycle) {
   var seen = [], keys = [];
   decycle = decycle || function(key, value) {
-    return '[Circular ' + getPath(value, seen, keys) + ']'
+    return '[Circular ' + getPath(value, seen, keys) + ']';
   };
   return function(key, value) {
     var ret = value;
@@ -34,7 +34,7 @@ function getSerialize (fn, decycle) {
     }
     if (fn) ret = fn(key, ret);
     return ret;
-  }
+  };
 }
 
 function getPath (value, seen, keys) {
@@ -172,7 +172,8 @@ module.exports = function(opt) {
             return {
                 name: modifier.name(),
                 description: modifier.description(),
-                className: modifier.className()
+                className: modifier.className(),
+                markup: modifier.markup()
             };
         });
     }
