@@ -7,6 +7,7 @@ var gutil = require('gulp-util');
 var gulpless = require('gulp-less');
 var msg = require('msg');
 var marked = require('marked');
+var stats = require('stylestats');
 var PluginError = gutil.PluginError;
 var File = gutil.File;
 
