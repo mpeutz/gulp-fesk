@@ -119,8 +119,31 @@ module.exports = function(opt) {
                         contents: new Buffer(content)
                     });
 
+                self.emit('data', file);
+            }));
+
+            // Output msg results as a json file
+            gulp.src(opt.templateDirectory)
+                .pipe(through(function (file) {
+
+                    var statistics = new stats(path.join(firstFile.base, '../styleguide/public/styles.css'));
+
+                    statistics.parse(function (error, result) {
+                        var content = stringify(result, null, 2);
+
+                        var joinedPath = path.join(firstFile.base, '/public/view/stats.json');
+
+                        var file = new File({
+                            cwd: firstFile.cwd,
+                            base: firstFile.base,
+                            path: joinedPath,
+                            contents: new Buffer(content)
+                        });
+
                     self.emit('data', file);
-                }));
+
+                    });
+            }));
 
 
             // Copy template assets, sass compilation added because default template uses it
