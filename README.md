@@ -20,4 +20,4 @@ Documentation to come
 
 * `overview`: Absolute path to markdown file which is used for styleguide home page
 * `templateDirectory`: Absolute path to template directory, by default `kss-node` default template is used.
-* `msg`: Options supported by [`msg-node`](https://github.com/mpeutz/msg)
+* `msg`: Options supported by [`msg (Magnificent Styleguide)`](https://github.com/mpeutz/msg)
