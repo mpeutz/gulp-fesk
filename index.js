@@ -8,6 +8,7 @@ var gulpless = require('gulp-less');
 var msg = require('msg');
 var marked = require('marked');
 var stats = require('stylestats');
+var specificity = require('css-specificity-map');
 var PluginError = gutil.PluginError;
 var File = gutil.File;
 
@@ -122,7 +123,7 @@ module.exports = function(opt) {
                 self.emit('data', file);
             }));
 
-            // Output msg results as a json file
+            // Output stylestats results as a json file
             gulp.src(opt.templateDirectory)
                 .pipe(through(function (file) {
 
@@ -132,6 +133,29 @@ module.exports = function(opt) {
                         var content = stringify(result, null, 2);
 
                         var joinedPath = path.join(firstFile.base, '/public/view/stats.json');
+
+                        var file = new File({
+                            cwd: firstFile.cwd,
+                            base: firstFile.base,
+                            path: joinedPath,
+                            contents: new Buffer(content)
+                        });
+
+                    self.emit('data', file);
+
+                    });
+            }));
+
+            // Output css-specificity-map results as a json file
+            gulp.src(opt.templateDirectory)
+                .pipe(through(function (file) {
+
+                    var spef = new specificity(path.join(firstFile.base, '../styleguide/public/styles.css'));
+
+                    spef.parse(function (error, result) {
+                        var content = stringify(result, null, 2);
+
+                        var joinedPath = path.join(firstFile.base, '/public/view/specificity.json');
 
                         var file = new File({
                             cwd: firstFile.cwd,
