@@ -150,12 +150,19 @@ module.exports = function(opt) {
             gulp.src(opt.templateDirectory)
                 .pipe(through(function (file) {
 
-                    var spef = new specificity(path.join(firstFile.base, '../styleguide/public/styles.css'));
+                    function readModuleFile(path, callback) {
+                        try {
+                            var filename = require.resolve(path);
+                            fs.readFile(filename, 'utf8', callback);
+                        } catch (e) {
+                            callback(e);
+                        }
+                    }
 
-                    spef.parse(function (error, result) {
-                        var content = stringify(result, null, 2);
-
+                    readModuleFile(path.join(firstFile.base, '../styleguide/public/styles.css'), function (err, css) {
                         var joinedPath = path.join(firstFile.base, '/public/view/specificity.json');
+                        var spec = specificity.parse(css,true,false);
+                        var content = stringify(spec, null, 2);
 
                         var file = new File({
                             cwd: firstFile.cwd,
@@ -164,9 +171,11 @@ module.exports = function(opt) {
                             contents: new Buffer(content)
                         });
 
-                    self.emit('data', file);
-
+                        self.emit('data', file);
                     });
+
+
+
             }));
 
 
