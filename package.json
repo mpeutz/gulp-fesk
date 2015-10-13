@@ -1,7 +1,7 @@
 {
-  "name": "gulp-msg",
+  "name": "gulp-fesk",
   "version": "0.0.1",
-  "description": "Gulp plugin for MSG (Magnificent Style Guide) documentation generation",
+  "description": "Gulp plugin for Fesk (Front end starter kit) documentation generation",
   "repository": {
     "type": "git",
     "url": "https://github.com/mpeutz/gulp-msg"
@@ -12,7 +12,7 @@
   },
   "license": "MIT",
   "dependencies": {
-    "msg": "git://github.com/mpeutz/msg.git",
+    "fesk": "git://github.com/mpeutz/fesk.git",
     "through": "~2.3.4",
     "gulp": "~3.5.2",
     "gulp-util": "~2.2.14",
@@ -22,7 +22,7 @@
     "css-specificity-map": "~1.0.0"
   },
   "bugs": {
-    "url": "https://github.com/mpeutz/gulp-msg/issues"
+    "url": "https://github.com/mpeutz/gulp-fesk/issues"
   },
-  "homepage": "https://github.com/mpeutz/gulp-msg"
+  "homepage": "https://github.com/mpeutz/gulp-fesk"
 }
