@@ -16,4 +16,8 @@ Documentation to come
 
 ## Options
 
-* `fesk`: Options supported by [`fesk (Front end starter kit)`](https://github.com/mpeutz/fesk)
+`fesk`: Options supported by [`fesk (Front end starter kit)`](https://github.com/mpeutz/fesk)
+
+## Demo
+
+ Coming Soon - [`fesk (Front end starter kit)`](https://github.com/mpeutz/fesk)
