@@ -7,7 +7,7 @@ This plugin currently lacks tests.
 ## Install
 
 ```
-npm install git://github.com/mpeutz/gulp-msg.git --save-dev
+npm install git://github.com/mpeutz/gulp-fesk.git --save-dev
 ```
 
 ## Usage
