@@ -1,8 +1,6 @@
-# gulp-msg
+# gulp-fesk
 
-Gulp plugin for [MSG (Magnificent styleguide)](https://github.com/mpeutz/msg) an enhanced version of KSS ([Knyle Style Sheets](http://warpspire.com/kss/)) documentation generation.
-
-This plugin is based on [kss-node](https://github.com/hughsk/kss-node) and generates a styleguide based on code documentation. The plugin is mainly a fork of `kss-nodes`'s bin script.
+Fesk (**F**ront **E**nd **S**tarter **K**it) focusing on an integrated styleguide. The styleguide is based on KSS ([Knyle Style Sheets](http://warpspire.com/kss/)). KSS a documentation syntax for stylesheets is an awesome tool but lacked some features that a living styleguide needs. Fesk takes the format that KSS started and expands on it. It includes "browser compatibility", "notes", "preproccessor mixin, function and variable documentation", "color chips" and ~~"animations"~~. Furthermore Fesk has implemented a change log, stylesheet statistics dashboard, and ~~versioning~~.
 
 This plugin currently lacks tests.
 
@@ -18,6 +16,4 @@ Documentation to come
 
 ## Options
 
-* `overview`: Absolute path to markdown file which is used for styleguide home page
-* `templateDirectory`: Absolute path to template directory, by default `kss-node` default template is used.
-* `msg`: Options supported by [`msg (Magnificent Styleguide)`](https://github.com/mpeutz/msg)
+* `fesk`: Options supported by [`fesk (Front end starter kit)`](https://github.com/mpeutz/fesk)
